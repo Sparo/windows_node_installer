@@ -1,0 +1,1 @@
+This script attempts to set up Node.js and install and properly configure pm2 in a Windows environment. It installs the direct version of Node.js from the official site and uses the pm2-installer package to configure the entire environment.
