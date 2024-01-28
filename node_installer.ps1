@@ -1,3 +1,8 @@
+Write-Host "============================="
+Write-Host "=== Configuration started ==="
+Write-Host "============================="
+
+
 # proveri da li je nodejs instaliran ako nije instaliraj ga
 if (!(Get-Command "node" -ErrorAction SilentlyContinue)) {
     # Define the download URL and the destination
@@ -56,4 +61,6 @@ npm run setup
 
 Set-Location ..\
 
+Write-Host "=============================="
 Write-Host "=== Configuration finished ==="
+Write-Host "=============================="
