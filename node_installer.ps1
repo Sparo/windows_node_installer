@@ -10,7 +10,9 @@ if (!(Get-Command "node" -ErrorAction SilentlyContinue)) {
     
     Write-Host "=== Install NodeJS ==="
     # Install NodeJS silently
-    Start-Process -FilePath "msiexec.exe" -ArgumentList "/i $env:TEMP\nodejs_installer.msi /qn" -Wait    
+    Start-Process -FilePath "msiexec.exe" -ArgumentList "/i $env:TEMP\nodejs_installer.msi /qn" -Wait  
+    # Refresh system paths
+    $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 } else {
     Write-Host "=== NodeJs installer already installed ... skip ==="
 }
